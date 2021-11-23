@@ -1,9 +1,6 @@
 fetch("/api/projects")
 .then(response => response.json())
-.then(( projects ) => { //({ destructor object, så vi lettere kan hjælpe de forskellige informationer.})
-    // group the projects by category (reduce?)
-
-
+.then(( projects ) => { 
     const projectWrapper = document.getElementById('projects-wrapper')
 
     projects.map(project => {
@@ -26,4 +23,3 @@ fetch("/api/projects")
     })
 })
 
-//<p>Technologies: ${escapeHTML(project.technologies.join(", "))}</p>

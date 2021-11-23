@@ -19,14 +19,3 @@ export async function createConnection() {
     });
 }
 
-
-
-/*
-export async function connectSqlite () {
-    return await open({ 
-        filename: "./projects.db", 
-        driver: sqlite3.Database
-    })
-}
-*/
-

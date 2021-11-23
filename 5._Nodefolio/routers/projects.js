@@ -4,15 +4,12 @@ const router = express.Router()
 import { connection } from "../database/connectSqlite.js";
 
 router.get("/api/projects", async (req,res) => {
-    //const dbConnection = await connectSqlite()
     const projects = await connection.all('SELECT * FROM projects')
 
     res.send(projects)
 }) 
 
 router.post("/api/projects", async (req, res) => {
-    //const dbConnection = await connectSqlite()
-
     const name = req.body.name
     const category = req.body.category
     const language = req.body.language
@@ -25,8 +22,6 @@ router.post("/api/projects", async (req, res) => {
 })
 
 router.put("/api/projects", async (req, res) => {
-    //const dbConnection = await connectSqlite()
-
     const id = req.body.id
     const name = req.body.name
     const category = req.body.category
@@ -41,7 +36,6 @@ router.put("/api/projects", async (req, res) => {
 
 
 router.delete("/api/projects", async (req, res) => {
-    //const dbConnection = await connectSqlite()
     const id = req.body.id
     connection.run('DELETE FROM projects WHERE id = ?', id)
 
@@ -49,13 +43,11 @@ router.delete("/api/projects", async (req, res) => {
 })
 
 router.get("/api/project/:id", async (req, res) => {
-    //const dbConnection = await connectSqlite()
     const id = req.params.id
     const project = await connection.get('SELECT * FROM projects WHERE id = ?', id)
 
     res.send(project)
 })
-
 
 export default router
 

@@ -5,8 +5,6 @@ import nodemailer from 'nodemailer'
 import { connection } from "../database/connectSqlite.js";
 
 router.post("/api/contact", async (req,res) => {
-    //const db = await connectSqlite()
-
     const emailDetails = await connection.get(`SELECT * FROM email WHERE id = 1`)
  
     const output = `

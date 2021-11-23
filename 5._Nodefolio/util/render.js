@@ -1,4 +1,3 @@
-//const fs = require("fs")
 import fs from 'fs'
 
 const header = fs.readFileSync("./public/components/header/header.html", "utf-8")
@@ -10,7 +9,3 @@ function createPage(path, options = {title : "Nodefolio"}) {
 }
 
 export default createPage
-/*
-module.exports = {
-    createPage
-}*/

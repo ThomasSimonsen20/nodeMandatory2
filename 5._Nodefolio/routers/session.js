@@ -14,8 +14,6 @@ const rateLimiter = rateLimit({
 router.use("/login/admin", rateLimiter)
 
 router.post("/login/admin", async (req, res) => {
-    //const db = await connectSqlite()
-
     const name = req.body.accountName 
     
     const hashInfo = await connection.get(`

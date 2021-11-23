@@ -51,7 +51,6 @@ router.get("/login", (req, res) => {
     } else {
         res.send(loginPage)
     }
-    
 })
 
 router.get("/dashboard", (req, res) => {
@@ -60,7 +59,6 @@ router.get("/dashboard", (req, res) => {
     } else {
         res.send(loginPage)
     }
-    
 })
 
 
