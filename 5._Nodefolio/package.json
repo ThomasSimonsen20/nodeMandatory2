@@ -1,0 +1,36 @@
+{
+  "name": "nodefolio",
+  "version": "0.0.1",
+  "description": "A personal portfolio",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create-sqlite-db": "node ./database/createSqliteSchema.js",
+    "dev": "npx nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThomasSimonsen20/node-js-class.git"
+  },
+  "author": "Thomas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ThomasSimonsen20/node-js-class/issues"
+  },
+  "homepage": "https://github.com/ThomasSimonsen20/node-js-class#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.5.1",
+    "express-session": "^1.17.2",
+    "helmet": "^4.6.0",
+    "nodemailer": "^6.7.0",
+    "sqlite": "^4.0.23",
+    "sqlite3": "^4.2.0",
+    "toastr": "^2.1.4"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
