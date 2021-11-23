@@ -25,6 +25,7 @@ router.post("/api/contact", async (req,res) => {
         auth: {
           user: emailDetails.accountName, 
           pass: emailDetails.password, 
+          //Har lavet et fakepassword, siden jeg har uploadet min DB, derefter virker den ikke pt.
         },
     });
     
